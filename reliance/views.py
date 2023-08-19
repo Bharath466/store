@@ -1,5 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def firstView(request):
-    return HttpResponse('Hello webpage')
+def home(request):
+    return render(request,'accounts/dashboard.html')
+
+def products(request):
+    return render(request,'accounts/products.html')
+
+def customer(request):
+    return render(request,'accounts/profile.html')
